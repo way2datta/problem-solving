@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint src test",
+    "lint-fix": "./node_modules/.bin/eslint --fix src test",
+    "start": "babel-node src/index",
+    "test": "./node_modules/.bin/mocha --require @babel/register --require  @babel/polyfill --recursive './src'",
+    "cover-test": "nyc mocha  --include-all-sources --require @babel/register --require  @babel/polyfill --recursive './src'",
+    "coverage-report": "npm run cover-test && nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
@@ -16,8 +21,17 @@
     "url": "https://github.com/way2datta/framework-classes/issues"
   },
   "homepage": "https://github.com/way2datta/framework-classes#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/register": "^7.5.5",
+    "@babel/cli": "^7.5.0",
+    "@babel/node": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "eslint": "^6.1.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
   }
 }
