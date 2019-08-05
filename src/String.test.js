@@ -8,10 +8,10 @@ describe("String", () => {
       var value ="DATTATRAYA KALE";
 
       // Act
-     var containsSearchString = String.contains(value, "TRAY");
+      var containsSearchString = String.contains(value, "TRAY");
 
-     // Assert
-     expect(containsSearchString).to.be.true;
+      // Assert
+      expect(containsSearchString).to.be.true;
     });
   });
 });
