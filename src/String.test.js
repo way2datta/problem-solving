@@ -8,7 +8,29 @@ describe("String", () => {
       var value ="DATTATRAYA KALE";
 
       // Act
-      var containsSearchString = String.contains(value, "TRAY");
+      var containsSearchString = String.contains(value, "KA");
+
+      // Assert
+      expect(containsSearchString).to.be.true;
+    });
+
+    it("should return true when search string is present at the begining", () => {
+      // Arrange
+      var value ="DATTATRAYA KALE";
+
+      // Act
+      var containsSearchString = String.contains(value, "DA");
+
+      // Assert
+      expect(containsSearchString).to.be.true;
+    });
+
+    it("should return true when search string is present in the end", () => {
+      // Arrange
+      var value ="DATTATRAYA KALE";
+
+      // Act
+      var containsSearchString = String.contains(value, "LE");
 
       // Assert
       expect(containsSearchString).to.be.true;
