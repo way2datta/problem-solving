@@ -35,5 +35,16 @@ describe("String", () => {
       // Assert
       expect(containsSearchString).to.be.true;
     });
+
+    it("should return false when search string is not present", () => {
+      // Arrange
+      var value ="DATTATRAYA KALE";
+
+      // Act
+      var containsSearchString = String.contains(value, "BH");
+
+      // Assert
+      expect(containsSearchString).to.be.false;
+    });
   });
 });
