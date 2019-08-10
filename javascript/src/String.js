@@ -1,25 +1,25 @@
 export default class String {
   static contains(value, searchText) {
-    var charMatchedCount;
+    var numberOfLettersMatched;
     for (let valueIndex = 0; valueIndex < value.length; valueIndex++) {
-      const containsSearchText = charMatchedCount === searchText.length;
+      const containsSearchText = numberOfLettersMatched === searchText.length;
       if (containsSearchText) {
         break;
       }
-      charMatchedCount = 0;
+      numberOfLettersMatched = 0;
       for (let searchIndex = 0; searchIndex < searchText.length; searchIndex++) {
         const searchChar = searchText[searchIndex];
         if (searchChar === value[valueIndex]) {
           valueIndex++;
-          charMatchedCount++;
+          numberOfLettersMatched++;
           continue;
         }
-        if(charMatchedCount) {
+        if(numberOfLettersMatched) {
           valueIndex--;
         }
         break;
       }
     }
-    return charMatchedCount > 0;
+    return numberOfLettersMatched > 0;
   }
 }
