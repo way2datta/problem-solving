@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/index.js",
-    "lint": "./node_modules/.bin/eslint src",
+    "lint": "./node_modules/.bin/eslint ./src",
     "lint-fix": "./node_modules/.bin/eslint --fix src",
     "test": "./node_modules/.bin/mocha --require @babel/register --require  @babel/polyfill --recursive './src'",
     "cover-test": "nyc mocha  --include-all-sources --require @babel/register --require  @babel/polyfill --recursive './src'",

@@ -11,5 +11,5 @@ export default {
     }
     return newSymbols.join("");
   }
-}
+};
 

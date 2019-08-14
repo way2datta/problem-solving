@@ -1,3 +1,3 @@
-import GuidGenerator from "./GuidGenerator";
+// import GuidGenerator from "./GuidGenerator";
 
-console.log(GuidGenerator.generate());
+// console.log(GuidGenerator.generate());

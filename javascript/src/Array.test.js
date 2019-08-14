@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import Array from "./Array";
-describe.only("Array", () => {
+describe("Array", () => {
   describe("#contains", () => {
     it("should return true if search elements are present in the middle  of the given array", () => {
       // Arrange
