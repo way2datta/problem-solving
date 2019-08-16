@@ -14,12 +14,25 @@ export default class String {
           numberOfLettersMatched++;
           continue;
         }
-        if(numberOfLettersMatched) {
+        if (numberOfLettersMatched) {
           valueIndex--;
         }
         break;
       }
     }
     return numberOfLettersMatched > 0;
+  }
+
+  static trimStart(value) {
+    const length = value.length;
+    var spaceCount = 0;
+    while (spaceCount < length) {
+      if (value.charCodeAt(spaceCount) === 32) {
+        spaceCount++;
+        continue;
+      }
+      break;
+    }
+    return value.substring(spaceCount);
   }
 }

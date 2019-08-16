@@ -47,7 +47,7 @@ describe("sumOfAllNumbersInString", () => {
   });
 });
 
-describe.only("calculateMaxValue", ()=>{
+describe("calculateMaxValue", ()=>{
   it("should return 73 for input 891", ()=>{
     // Arrange
     const input = "891";
