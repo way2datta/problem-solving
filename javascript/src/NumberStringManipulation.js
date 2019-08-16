@@ -7,7 +7,7 @@ export function sumOfAllNumbersInString(text) {
     const char = text[index];
 
     if (!isNaN(char)) {
-      var factor = lastNumber ? 10  : 0;
+      var factor = lastNumber ? 10 : 0;
       lastNumber = lastNumber * factor + +char;
     }
     else {
@@ -16,4 +16,21 @@ export function sumOfAllNumbersInString(text) {
     }
   }
   return sum + lastNumber;
+}
+
+// Calculate maximum value using ‘+’ or ‘*’ sign between two numbers in a string
+export function calculateMaxValue(input) {
+  let result = +input[0];
+
+  for (let i = 1; i < input.length; i++) {
+    const currentDigit = +input[i];
+    if (currentDigit === 0 || currentDigit === 1 ||
+      result === 0 || result === 1) {
+      result = currentDigit + result;
+    }
+    else {
+      result = currentDigit * result;
+    }
+  }
+  return result;
 }
