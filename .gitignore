@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/csharp/problem-solving/.vs/ProblemSolving/v15/Server/sqlite3
+/csharp/problem-solving/problem-solving/obj
+/csharp/problem-solving/.vs/ProblemSolving/v15
+/csharp/problem-solving/problem-solving/bin/Debug/netcoreapp2.2
+/csharp/problem-solving/ProblemSolving.Tests/bin/Debug/netcoreapp2.2
+/csharp/problem-solving/ProblemSolving.Tests/obj
