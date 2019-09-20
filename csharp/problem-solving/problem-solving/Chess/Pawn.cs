@@ -7,8 +7,6 @@ namespace ProblemSolving.Chess
     {
         public IEnumerable<Position> GetPossiblePositions(Position startingPosition)
         {
-            ValidatePosition(startingPosition);
-
             return new Position[] {
                 new Position{
                     RankIndex = startingPosition.RankIndex,
@@ -17,16 +15,6 @@ namespace ProblemSolving.Chess
             };
         }
 
-        private void ValidatePosition(Position position)
-        {
-            if (position.RankIndex < 0 || position.RankIndex > 7)
-            {
-                throw new ApplicationException("Invalid rank index.");
-            }
-            if (position.FileIndex < 0 || position.FileIndex > 7)
-            {
-                throw new ApplicationException("Invalid file index.");
-            }
-        }
+      
     }
 }

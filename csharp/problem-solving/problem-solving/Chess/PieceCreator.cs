@@ -12,6 +12,8 @@ namespace ProblemSolving.Chess
                     return new Pawn();
                 case "rook":
                     return new Rook();
+                case "bishop":
+                    return new Bishop();
                 default:
                     throw new ArgumentException("Invalid args: piece name");
             }
