@@ -17,6 +17,11 @@ module.exports = {
     }
     currentNode.next = newNode;
   },
+  addFirst: (value) =>{
+    const newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+  },
   iterate: () => {
     let currentNode = this.head;
     while (currentNode) {
@@ -38,9 +43,7 @@ module.exports = {
 
     while (currentNode.value != value) {
       previousNode = currentNode;
-      if (currentNode.next) {
-        currentNode = currentNode.next;
-      }
+      currentNode = currentNode.next;
     }
     previousNode.next = currentNode.next;
   }
