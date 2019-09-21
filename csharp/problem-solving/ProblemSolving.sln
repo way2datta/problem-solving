@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProblemSolving", "problem-s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProblemSolving.Tests", "ProblemSolving.Tests\ProblemSolving.Tests.csproj", "{460FBCD0-8C1B-4EBA-8D2C-B2A3805A19B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemSolving.ConsoleApp", "ProblemSolving.ConsoleApp\ProblemSolving.ConsoleApp.csproj", "{94281637-6A04-4F10-BA5E-F1D9F718E1C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProblemSolving.ConsoleApp", "ProblemSolving.ConsoleApp\ProblemSolving.ConsoleApp.csproj", "{94281637-6A04-4F10-BA5E-F1D9F718E1C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

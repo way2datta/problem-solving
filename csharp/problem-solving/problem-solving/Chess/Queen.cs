@@ -11,7 +11,6 @@ namespace ProblemSolving.Chess
             var horizontalPositions = GetHorizontalPositions(startingPosition);
             var verticalPositions = GetVerticalPositions(startingPosition);
 
-
             rightDiagonalPositions.AddRange(leftDiagonalPositions);
             rightDiagonalPositions.AddRange(horizontalPositions);
             rightDiagonalPositions.AddRange(verticalPositions);
@@ -66,7 +65,7 @@ namespace ProblemSolving.Chess
             currentRankIndex = startingPosition.RankIndex;
             currentFileIndex = startingPosition.FileIndex;
 
-            while (currentRankIndex <7 && currentFileIndex > 0)
+            while (currentRankIndex < 7 && currentFileIndex > 0)
             {
                 currentRankIndex++;
                 currentFileIndex--;
@@ -76,6 +75,7 @@ namespace ProblemSolving.Chess
 
             return leftDiagonalPositions;
         }
+
         private static List<Position> GetHorizontalPositions(Position startingPosition)
         {
             var horizontalPositions = new List<Position>();

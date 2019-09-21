@@ -60,7 +60,7 @@ namespace ProblemSolving.Chess
             currentRankIndex = startingPosition.RankIndex;
             currentFileIndex = startingPosition.FileIndex;
 
-            while (currentRankIndex <7 && currentFileIndex > 0)
+            while (currentRankIndex < 7 && currentFileIndex > 0)
             {
                 currentRankIndex++;
                 currentFileIndex--;

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ProblemSolving.Chess
 {
@@ -7,7 +6,7 @@ namespace ProblemSolving.Chess
     {
         public IEnumerable<Position> GetPossiblePositions(Position startingPosition)
         {
-            var horizontalPositions =  GetHorizontalPositions(startingPosition);
+            var horizontalPositions = GetHorizontalPositions(startingPosition);
             var verticalPositions = GetVerticalPositions(startingPosition);
 
             horizontalPositions.AddRange(verticalPositions);
