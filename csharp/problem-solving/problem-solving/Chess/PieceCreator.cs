@@ -18,6 +18,8 @@ namespace ProblemSolving.Chess
                     return new Queen();
                 case "king":
                     return new King();
+                case "horse":
+                    return new Horse();
                 default:
                     throw new ArgumentException("Invalid args: piece name");
             }
