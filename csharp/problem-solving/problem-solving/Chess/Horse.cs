@@ -20,7 +20,7 @@ namespace ProblemSolving.Chess
             var currentRankIndex = startingPosition.RankIndex;
             var currentFileIndex = startingPosition.FileIndex;
 
-            var possibleFileIndex = currentRankIndex + 2;
+            var possibleFileIndex = currentFileIndex + 2;
             var possiblePositions = new List<Position>();
 
             if (0 <= possibleFileIndex && possibleFileIndex <= 7)
