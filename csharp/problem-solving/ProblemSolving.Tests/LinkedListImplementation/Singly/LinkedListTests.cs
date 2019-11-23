@@ -121,5 +121,66 @@ namespace ProblemSolving.LinkedListImplementation.Singly
             linkedList.AddLast(200);
             linkedList.AddBefore(400, 300);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(LinkedListNodeNotFoundException))]
+        public void LinkedList_RemoveFirst_ThrowsExceptionWhenListWasEmpty()
+        {
+            LinkedList<int> linkedList = new LinkedList<int>();
+
+            linkedList.RemoveFirst();
+        }
+
+        [TestMethod]
+        public void LinkedList_RemoveFirst_WhenHasOnlyOneElement()
+        {
+            LinkedList<int> linkedList = new LinkedList<int>();
+            linkedList.AddLast(100);
+            linkedList.RemoveFirst();
+            Assert.AreEqual(0, linkedList.Count);
+        }
+
+        [TestMethod]
+        public void LinkedList_RemoveFirst()
+        {
+            LinkedList<int> linkedList = new LinkedList<int>();
+            linkedList.AddLast(100);
+            linkedList.AddLast(200);
+
+            linkedList.RemoveFirst();
+            Assert.AreEqual(200, linkedList.First.Value);
+            Assert.AreEqual(1, linkedList.Count);
+        }
+
+        [TestMethod]
+        public void LinkedList_RemoveLast()
+        {
+            LinkedList<int> linkedList = new LinkedList<int>();
+            linkedList.AddLast(100);
+            linkedList.AddLast(200);
+
+            linkedList.RemoveLast();
+
+            Assert.AreEqual(100, linkedList.Last.Value);
+            Assert.AreEqual(1, linkedList.Count);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(LinkedListNodeNotFoundException))]
+        public void LinkedList_RemoveLast_ThrowsExceptionWhenListWasEmpty()
+        {
+            LinkedList<int> linkedList = new LinkedList<int>();
+
+            linkedList.RemoveLast();
+        }
+
+        [TestMethod]
+        public void LinkedList_RemoveLast_WhenHasOnlyOneElement()
+        {
+            LinkedList<int> linkedList = new LinkedList<int>();
+            linkedList.AddLast(100);
+            linkedList.RemoveLast();
+            Assert.AreEqual(0, linkedList.Count);
+        }
     }
 }

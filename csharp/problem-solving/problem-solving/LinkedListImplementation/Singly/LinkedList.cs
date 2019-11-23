@@ -157,6 +157,10 @@ namespace ProblemSolving.LinkedListImplementation.Singly
 
         public void RemoveFirst()
         {
+            if (_head==null)
+            {
+                throw new LinkedListNodeNotFoundException("");
+            }
             Count--;
 
             var tempNode = _head;
@@ -165,6 +169,11 @@ namespace ProblemSolving.LinkedListImplementation.Singly
 
         public void RemoveLast()
         {
+            if (_head == null)
+            {
+                throw new LinkedListNodeNotFoundException("");
+            }
+
             Count--;
 
             var currentNode = _head;
