@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ProblemSolving
+namespace ProblemSolving.Doubly
 {
     public class LinkedList<T>
     {
