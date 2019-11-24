@@ -25,6 +25,11 @@ namespace ProblemSolving.StackImplementation.Array
 
         public T Peek()
         {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("Stack was empty.");
+            }
+
             return _items[Count - 1];
         }
 
@@ -35,8 +40,10 @@ namespace ProblemSolving.StackImplementation.Array
                 throw new InvalidOperationException("Stack was empty.");
             }
 
-            var item = Peek();
+            var item = _items[Count - 1];
+            _items[Count - 1] = default(T);
             Count--;
+
             return item;
         }
 
