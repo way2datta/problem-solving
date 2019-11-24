@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProblemSolving.StackImplementation.Array;
+using ProblemSolving.StackImplementation.LinkedList;
 
-namespace ProblemSolving.Tests
+namespace ProblemSolving.Tests.LinkedList
 {
     [TestClass]
     public class LinkedListTests
@@ -27,27 +27,9 @@ namespace ProblemSolving.Tests
         {
             Stack<int> stack = new Stack<int>();
             stack.Push(100);
+
             var item = stack.Pop();
             Assert.AreEqual(100, item);
-        }
-
-        [TestMethod]
-        public void Stack_IsFull()
-        {
-            Stack<int> stack = new Stack<int>(2);
-            stack.Push(100);
-            stack.Push(200);
-
-            Assert.IsTrue(stack.IsFull());
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
-        public void Stack_PushItem_ThrowsException_WhenStackOverflows()
-        {
-            Stack<int> stack = new Stack<int>(1);
-            stack.Push(100);
-            stack.Push(200);
         }
 
         [TestMethod]

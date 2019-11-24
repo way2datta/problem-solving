@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProblemSolving.StackImplementation.Array
 {
     public class Stack<T> : IArrayBasedStack<T>
     {
-        T[] _items;
+        private T[] _items;
         private static int DefaultCapacity = 5;
 
         public Stack() : this(DefaultCapacity)

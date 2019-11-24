@@ -1,6 +1,3 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace ProblemSolving.Tests
+﻿namespace ProblemSolving.Tests
 {
-    
 }

@@ -35,7 +35,7 @@ namespace ProblemSolving.LinkedListImplementation.Singly
 
             var currentNode = _head;
 
-            while (currentNode!=null && !currentNode.Value.Equals(value))
+            while (currentNode != null && !currentNode.Value.Equals(value))
             {
                 currentNode = currentNode.Next;
             }
@@ -58,7 +58,7 @@ namespace ProblemSolving.LinkedListImplementation.Singly
             var currentNode = _head;
             LinkedListNode<T> previousNode = _head;
 
-            while (currentNode!=null && !currentNode.Value.Equals(value))
+            while (currentNode != null && !currentNode.Value.Equals(value))
             {
                 previousNode = currentNode;
                 currentNode = currentNode.Next;
@@ -157,7 +157,7 @@ namespace ProblemSolving.LinkedListImplementation.Singly
 
         public void RemoveFirst()
         {
-            if (_head==null)
+            if (_head == null)
             {
                 throw new LinkedListNodeNotFoundException("");
             }
@@ -167,7 +167,7 @@ namespace ProblemSolving.LinkedListImplementation.Singly
             _head = _head.Next;
         }
 
-        public void RemoveLast()
+        public LinkedListNode<T> RemoveLast()
         {
             if (_head == null)
             {
@@ -186,6 +186,7 @@ namespace ProblemSolving.LinkedListImplementation.Singly
             }
 
             previousNode.Next = null;
+            return currentNode;
         }
 
         public void Traverse()
