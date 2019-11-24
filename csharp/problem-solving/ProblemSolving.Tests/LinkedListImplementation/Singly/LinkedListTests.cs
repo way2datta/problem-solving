@@ -175,7 +175,7 @@ namespace ProblemSolving.LinkedListImplementation.Singly
         }
 
         [TestMethod]
-        public void LinkedList_RemoveLast_WhenHasOnlyOneElement()
+        public void LinkedList_RemoveLast_WhenListHasOnlyOneElement()
         {
             LinkedList<int> linkedList = new LinkedList<int>();
             linkedList.AddLast(100);
