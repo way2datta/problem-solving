@@ -16,6 +16,11 @@ namespace ProblemSolving.StackImplementation.LinkedList
 
         public T Peek()
         {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("Stack was empty.");
+            }
+
             return _items.Last.Value;
         }
 
