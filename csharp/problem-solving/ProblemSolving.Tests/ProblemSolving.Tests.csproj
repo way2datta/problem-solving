@@ -16,4 +16,8 @@
     <ProjectReference Include="..\problem-solving\ProblemSolving.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="QueueImplementation\LinkedList\" />
+  </ItemGroup>
+
 </Project>

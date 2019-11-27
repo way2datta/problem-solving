@@ -6,4 +6,8 @@
     <AssemblyName>ProblemSolving</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="QueueImplementation\LinkedList\" />
+  </ItemGroup>
+
 </Project>

@@ -1,11 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProblemSolving.StackImplementation.LinkedList;
 
-namespace ProblemSolving.Tests.LinkedList
+namespace ProblemSolving.StackImplementation.LinkedList.Tests
 {
     [TestClass]
-    public class LinkedListTests
+    public class StackTests
     {
         [TestMethod]
         public void Stack_IsEmpty_WhenInialized()

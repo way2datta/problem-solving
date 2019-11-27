@@ -7,6 +7,7 @@ namespace ProblemSolving.Chess
         public IEnumerable<Position> GetPossiblePositions(Position startingPosition)
         {
             var rightDiagonalPositions = GetRightDiagonalPositions(startingPosition);
+
             var leftDiagonalPositions = GetLeftDiagonalPositions(startingPosition);
 
             rightDiagonalPositions.AddRange(leftDiagonalPositions);
