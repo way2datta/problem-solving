@@ -25,7 +25,7 @@ namespace ProblemSolving.StackImplementation.Array
 
         public T Peek()
         {
-            if (IsEmpty())
+            if (Count == 0)
             {
                 throw new InvalidOperationException("Stack was empty.");
             }
@@ -35,7 +35,7 @@ namespace ProblemSolving.StackImplementation.Array
 
         public T Pop()
         {
-            if (IsEmpty())
+            if (Count == 0)
             {
                 throw new InvalidOperationException("Stack was empty.");
             }
@@ -49,7 +49,7 @@ namespace ProblemSolving.StackImplementation.Array
 
         public void Push(T item)
         {
-            if (IsFull())
+            if (Count == _items.Length)
             {
                 throw new InvalidOperationException("Stack was full.");
             }

@@ -51,7 +51,7 @@ namespace ProblemSolving.StackImplementation.Array.Tests
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void Stack_PushItem_ThrowsException_WhenStackUnderflows()
+        public void Stack_PopItem_ThrowsException_WhenStackUnderflows() 
         {
             Stack<int> stack = new Stack<int>();
             stack.Pop();
